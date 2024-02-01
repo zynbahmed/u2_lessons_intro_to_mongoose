@@ -38,8 +38,6 @@
 
 As we continue to learn new development concepts and techniques during this unit we'll be incorporating them in a reference app named [Mongoose Movies](https://mongoose-movies-sei.herokuapp.com/movies).
 
-In fact, we'll be building a reference app for each full-stack unit that can be referred to when coding your labs and project.
-
 ## 2. Setup
 
 We'll be learning about Mongoose over several lessons so a code-along repo has been set up to get started and to sync with if need be.
