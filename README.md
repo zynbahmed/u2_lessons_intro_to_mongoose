@@ -933,11 +933,6 @@ res.redirect('/movies');
 <hr>
 </details>
 
-### Further Study or Code-Along?
-
-We always encourage practicing expanding your learning on your own by reviewing the Further Study sections.
-
-However, this time, the option is yours, you can stop the video and implement default values and validation on your own, or feel to follow along as I take you through it!
 
 ## 15. Further Study
 
