@@ -427,7 +427,9 @@ Here are the eight built-in `schemaTypes` available:
 - `Date`: Special object maintained by mongoose for handling Dates, does not behave like javascript Date object, see these docs for more on using [mongoose Dates](https://mongoosejs.com/docs/tutorials/dates.html) 
 - `Boolean`: True/false data type, behaves the same as javascript boolean.
 - `ObjectId`: This is a special class used by mongoDB for storing the object ID of a document. You can think of this as a key in a relational database. This object appears to be a string at times but it is in fact an object. Read up a bit on [mongoose ObjectId](https://mongoosejs.com/docs/schematypes.html#objectids)
-- `Array`: Mongoose supports arrays of [schemaTypes](https://mongoosejs.com/docs/api/schema.html#schema_Schema-Types) and [subdocuments](https://mongoosejs.com/docs/subdocs.html) in mongoDB. Keep in mind this isn't a 1-1 with a typical javascript array.
+- `Array`: Mongoose supports arrays of [schemaTypes](https://mongoosejs.com/docs/api/schema.html#schema_Schema-Types) and [subdocuments](https://mongoosejs.com/docs/subdocs.html), also known as nested documents, in mongoDB. Keep in mind this isn't a 1-1 with a typical javascript array.
+- 
+
 
 ## 8. Compiling Schemas into Models
 
