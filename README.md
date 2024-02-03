@@ -412,7 +412,7 @@ const movieSchema = new mongoose.Schema({
 });
 ```
 
-This really comes in handy so it's recommended to pretty much add the `timestamps: true` option to all schemas that you define.
+This really comes in handy to see when a resource was created, or modified, and also in cases where you want to sort resources based on when they were created, so it's recommended to pretty much add the `timestamps: true` option to all schemas that you define.
 
 Awesome! We've defined a Mongoose schema!
 
