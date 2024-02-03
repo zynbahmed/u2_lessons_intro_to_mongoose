@@ -44,9 +44,9 @@ We'll be learning about Mongoose over several lessons so a code-along repo has b
 
 To get set up:
 
-1. Move into your **code** folder:
+1. Move into the **labs** folder within your **GA** folder:
     ```
-    cd ~/code
+    cd ~/GA/labs
     ```
 2. Clone the repo containing the starter code:
     ```
