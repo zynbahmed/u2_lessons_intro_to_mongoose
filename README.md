@@ -481,7 +481,7 @@ We can use a Mongoose Model in two ways to create documents in the collection:
 
 1. `const movie = new Movie(<object>)`, then`movie.save()`<br>-OR-
 
-2. `Movie.create(<object or array of objects>)`
+2. `Movie.create(<object>)`
 
 The first way lets us have more control over how we change the object before saving it. This means we can do extra things like adjusting the data format or processing data in a way that suits our application's needs. It's helpful when we need more customization or validation before storing the data in the database.
 
