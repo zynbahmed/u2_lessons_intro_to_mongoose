@@ -982,7 +982,7 @@ Test it out in the app and we'll find that it didn't work for the `releaseYear` 
 We can fix this in the `create` action by deleting any property in `req.body` that is an empty string:
 
 ```js
-if (req.body.cast) {
+   if (req.body.cast) {
 	// remove empty properties
         for (let key in req.body) {
             if (req.body[key] === '') {
