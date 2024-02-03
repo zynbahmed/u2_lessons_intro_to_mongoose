@@ -839,8 +839,7 @@ Movie.find({mpaaRating: 'PG'})
   .where('cast').in('Bob Hope')
   .sort('-title')
   .limit(3)
-  .select('title releaseYear')
-  .exec(cb);
+  .select('title releaseYear');
 ``` 
 
 The above query builder syntax is unique to Mongoose and is not available in MongoDB.
