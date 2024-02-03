@@ -768,8 +768,8 @@ Now let's write the code that will use the `Movie` Model to create the movie sub
 const create = async(req, res) => {
     try {
         
-         //In this code, the double negation (!!) is used to convert the value of req.body.nowShowing 
-        //to a boolean. The reason for this is that HTML forms, when submitting a checked checkbox, 
+	//In this code, the double negation (!!) is used to convert the value of req.body.nowShowing 
+	//to a boolean. The reason for this is that HTML forms, when submitting a checked checkbox, 
         //send the value as the string "on." By using !!, it's converted to a boolean value:
         req.body.nowShowing = !!req.body.nowShowing;
 
