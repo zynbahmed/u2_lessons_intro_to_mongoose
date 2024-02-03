@@ -195,7 +195,21 @@ Environment variables include the database's connection string and other secrets
 
 Because they usually hold sensitive info, `.env` files should never be pushed to GitHub and thus need to be Git ignored.
 
-Environment variables can also be used to configure an application's settings without changing the app's source code.
+We can do so by creating a `.gitignore` file at the root directory of our project:
+
+```
+touch .gitignore
+```
+
+And adding the `.env` file:
+
+```
+//I am the gitignore file
+
+.env 
+```
+
+Environment variables can be used to configure an application's settings without changing the app's source code.
 
 ### Setting Up the `.env`
 
