@@ -140,7 +140,6 @@ Then, in our controller actions, we can require the `Cat` model and use it to pe
 ```js
 // Again, convention is to name the Model's
 // variable as singular and UpperCamelCased
-const Cat = require('./models/cat');
 
 const Cat = require('./models/cat');
 
