@@ -505,7 +505,10 @@ const createMovie = async () => {
 
     const doc = await Movie.create({
       title: 'Star Wars - A New Hope',
-      releaseYear: 1977
+      releaseYear: 1977,
+      mpaaRating: "PG",
+      cast: ["Mark Hamill", "Carrie Fisher", "Harrison Ford"]
+      nowShowing: true; 
     });
 
     console.log("Done creating movie", doc);
@@ -905,7 +908,7 @@ Here are the common Model methods for querying data:
       </tbody>
     </table>
 
-    <%- include('../partials/header') %>
+    <%- include('../partials/footer') %>
     ```
 
 Now a quick refactor...
