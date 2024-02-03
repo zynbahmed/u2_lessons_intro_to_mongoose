@@ -495,14 +495,13 @@ Create a `seed.js` file at the root of the project directory and add the followi
 
 ```
 require('dotenv').config();  // Necessary if connection string is in a .env file
+require('./config/database');  // Execute the code to connect to the db 
 
-const { connect } = require('./config/database');  // Assuming connect is a function that establishes the database connection
 const Movie = require('./models/movie');
 
-// Define an async function to use await
+// Define an async function to create the movie in the database 
 const createMovie = async () => {
   try {
-    await connect();  // Assuming connect is a function that returns a promise for establishing the database connection
 
     const doc = await Movie.create({
       title: 'Star Wars - A New Hope',
@@ -519,14 +518,18 @@ const createMovie = async () => {
 createMovie();
 ```
 
-Run the file from the command line with `node seed.js` and check for the output below: 
+Run the file from the command line with `node seed.js` and check for the output: 
 
 ```js
-{ __v: 0,
+Connected to MongoDB mongoose-movies at ac-8w7xip0-shard-00-02.bvo1sdn.mongodb.net:27017
+Done creating movie {
   title: 'Star Wars - A New Hope',
   releaseYear: 1977,
-  _id: 57ea692bab09506a97e969ba,
-  cast: []
+  cast: [],
+  _id: new ObjectId('65bdf6f099356af3a7ea84a5'),
+  createdAt: 2024-02-03T08:18:56.222Z,
+  updatedAt: 2024-02-03T08:18:56.222Z,
+  __v: 0
 }
 ```
 
