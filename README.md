@@ -425,14 +425,9 @@ Here are the eight built-in `schemaTypes` available:
 - `String`: same as a javascript string
 - `Number`: Holds 64-bit floating point by default.
 - `Date`: Special object maintained by mongoose for handling Dates, does not behave like javascript Date object, see these docs for more on using [mongoose Dates](https://mongoosejs.com/docs/tutorials/dates.html) 
-- `Buffer`: Cast these values to [node buffer objects](https://www.w3schools.com/nodejs/ref_buffer.asp).
 - `Boolean`: True/false data type, behaves the same as javascript boolean.
-- `Mixed`: A grab-bag data type - you can put whatever you want in this datatype and Mongoose will not attempt to cast it to any other data type or object. Think of Mixed as a free-form field where you can place anything that can be stored in BSON format.
 - `ObjectId`: This is a special class used by mongoDB for storing the object ID of a document. You can think of this as a key in a relational database. This object appears to be a string at times but it is in fact an object. Read up a bit on [mongoose ObjectId](https://mongoosejs.com/docs/schematypes.html#objectids)
 - `Array`: Mongoose supports arrays of [schemaTypes](https://mongoosejs.com/docs/api/schema.html#schema_Schema-Types) and [subdocuments](https://mongoosejs.com/docs/subdocs.html) in mongoDB. Keep in mind this isn't a 1-1 with a typical javascript array.
-- `Decimal128`: A 128-bit version of Number
-- `Map`: This is a mongoose class built on top of the [javascript Map Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). Maps in mongoose are used frequently for creating nested documents with arbitrary keys(not always object IDs). See more on [mongoose maps](https://mongoosejs.com/docs/schematypes.html#maps).
-- `Schema`: A mongoose specific class used to define schemas.
 
 ## 8. Compiling Schemas into Models
 
