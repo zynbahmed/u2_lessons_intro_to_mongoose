@@ -487,32 +487,39 @@ The first way lets us have more control over how we change the object before sav
 
 The second approach is more simple in its syntax and provides built-in validation, so that we don't have to call the `.save()` method on the object in order to persist it in the database.  
 
-#### Creating documents in a Node REPL
+#### Creating documents in a seed file 
 
-Before writing the code in the app to create movies, let's do so in a Node REPL...
+Before writing the code in the app to create movies, let's do so in a seed file just to make sure our databae is configured correclty and our Movie model is working.  
 
-Warning, if you make a typo, you'll have to start over:
+Create a `seed.js` file at the root of the project directory and add the following:
 
 ```
-node
+require('dotenv').config();  // Necessary if connection string is in a .env file
 
-require('dotenv').config()   // Necessary if connection string in a .env file
+const { connect } = require('./config/database');  // Assuming connect is a function that establishes the database connection
+const Movie = require('./models/movie');
 
-require('./config/database')
+// Define an async function to use await
+const createMovie = async () => {
+  try {
+    await connect();  // Assuming connect is a function that returns a promise for establishing the database connection
 
-const Movie = require('./models/movie')
+    const doc = await Movie.create({
+      title: 'Star Wars - A New Hope',
+      releaseYear: 1977
+    });
 
-Movie.create({
-  title: 'Star Wars - A New Hope',
-  releaseYear: 1977
-}).then((doc) => {
-  console.log(doc);
-}).catch((err) => {
-  console.error(err);
-});
+    console.log("Done creating movie", doc);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// Call the async function
+createMovie();
 ```
 
-Logged out will be a document that looks something like...
+Run the file from the command line with `node seed.js` and check for the output below: 
 
 ```js
 { __v: 0,
@@ -523,13 +530,11 @@ Logged out will be a document that looks something like...
 }
 ```
 
-> Note: The `__v` field is added by Mongoose to track versioning - ignore it.
-
 Note that we did not provide a value for `nowShowing` so it was not created as a property in the document.
 
 However, properties of type `Array`, are always initialized to empty arrays like `cast` was. This makes it convenient to start pushing performers into  it!
 
-That was fun! Exit the REPL (`ctrl + C` twice) and lets see how we can use<br>`new` + `save`<br>to create movie documents - but this time from within our app...
+That was fun! Lets see how we can use<br>`new` + `save`<br>to create movie documents - but this time from within our app...
 
 ## 10. Review the 5-Step Process to Add a Feature to a Web App
 
