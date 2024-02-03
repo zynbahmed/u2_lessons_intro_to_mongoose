@@ -507,8 +507,8 @@ const createMovie = async () => {
       title: 'Star Wars - A New Hope',
       releaseYear: 1977,
       mpaaRating: "PG",
-      cast: ["Mark Hamill", "Carrie Fisher", "Harrison Ford"]
-      nowShowing: true; 
+      cast: ["Mark Hamill", "Carrie Fisher", "Harrison Ford"],
+      nowShowing: true
     });
 
     console.log("Done creating movie", doc);
