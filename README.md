@@ -1029,10 +1029,6 @@ Validations are used to prevent bogus data, i.e., data that does not conform to 
 
 There are several built-in validators we can use.
 
-However, endless flexibility is possible with custom asynchronous and synchronous validator functions and/or Mongoose middleware.
-
-As always, let's take a look at the basics at first...
-
 Movies should not be allowed to be created without a `title`.  Let's make it required:
 
 ```js
