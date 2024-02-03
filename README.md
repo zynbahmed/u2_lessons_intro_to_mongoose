@@ -982,11 +982,18 @@ Test it out in the app and we'll find that it didn't work for the `releaseYear` 
 We can fix this in the `create` action by deleting any property in `req.body` that is an empty string:
 
 ```js
-if (req.body.cast) req.body.cast = req.body.cast.split(',');
-// remove empty properties
-for (let key in req.body) {
-  if (req.body[key] === '') delete req.body[key];
-}
+if (req.body.cast) {
+	// remove empty properties
+        for (let key in req.body) {
+            if (req.body[key] === '') {
+                delete req.body[key];
+            } 
+        }
+	  // Remove any whitespace at the start and end of cast
+	  req.body.cast = req.body.cast.trim();
+	  // Split cast into an array using a regular expression as a separator
+	  req.body.cast = req.body.cast.split(/\s*,\s*/);
+	}
 ```
 
 Now if we don't type in a value in the form for the `releaseYear` property, the default of `2000` will be set.
