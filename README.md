@@ -24,7 +24,7 @@
 6. Defining Schemas in Mongoose
 7. Built-in Types for Properties
 8. Compiling Schemas into Models
-9. Use a Model to Create Data in a Node REPL
+9. Write a script to seed our database 
 10. Review the 5-Step Process to Add a Feature to a Web App
 11. Implement the `new` Functionality
 12. Implement the `create` Functionality
