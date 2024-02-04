@@ -11,6 +11,8 @@ const create = async(req, res) => {
         req.body.cast = req.body.cast.split(',');
     }
 
+    req.body.nowShowing = !!req.body.nowShowing
+
     try {
         await Movie.create(req.body);
         res.redirect('movies/new')
