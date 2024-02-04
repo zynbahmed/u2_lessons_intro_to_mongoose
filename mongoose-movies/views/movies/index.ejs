@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<h2>Movie List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Year</th>
+      <th>Rating</th>
+      <th>Cast</th>
+      <th>Now Showing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% movies.forEach ((movie) => { %> <!-- Write the line of EJS to iterate over movies using forEach -->
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.releaseYear %></td>
+        <td><%= movie.mpaaRating %></td>
+        <td><%= movie.cast.join(', ') %></td>
+        <!-- finish the ternary expression to display
+                      'Yes' or 'Nope' --> 
+        <td><%= movie.nowShowing ? "Yes" : "No" %></td>
+      </tr>
+    <% }) %> <!-- Close the forEach using EJS here -->
+  </tbody>
+</table>
+
+<%- include('../partials/footer') %>
